@@ -8,7 +8,7 @@ const btnListarProfs = document.getElementById("listarProfs")
 
 //chamadas pra API
 async function request() {
-  const response = await fetch("http://localhost:3000/alunas").then(data =>
+  const response = await fetch("http://localhost:4000/alunas").then(data =>
     data.json()
   )
   console.log(response)
@@ -16,14 +16,14 @@ async function request() {
 }
 
 async function requestAluna(id) {
-  const response = await fetch(`http://localhost:3000/alunas/${id} `).then(
+  const response = await fetch(`http://localhost:4000/alunas/${id} `).then(
     data => data.json()
   )
   return response
 }
 
 async function requestProfs() {
-  const response = await fetch("http://localhost:3000/professoras").then(data =>
+  const response = await fetch("http://localhost:4000/professoras").then(data =>
     data.json()
   )
   console.log(response)
@@ -31,7 +31,7 @@ async function requestProfs() {
 }
 
 async function requestProf(id) {
-  const response = await fetch(`http://localhost:3000/professoras/${id}`).then(
+  const response = await fetch(`http://localhost:4000/professoras/${id}`).then(
     data => data.json()
   )
   console.log(response)
